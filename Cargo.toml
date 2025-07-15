@@ -26,7 +26,6 @@ log = "0.4"
 esp-idf-svc = "0.51"
 esp-idf-sys = "0.36"
 
-# Configuration goes here in the root/binary crate
 [package.metadata.esp-idf-sys]
 [[package.metadata.esp-idf-sys.extra_components]]
 remote_component = { name = "dptechnics/walter-modem", version = "^1.4.0" }
