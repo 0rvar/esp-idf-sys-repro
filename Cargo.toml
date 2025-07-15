@@ -1,0 +1,36 @@
+[package]
+name = "esp-idf-sys-repro"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+rust-version = "1.87"
+
+[[bin]]
+name = "esp-idf-sys-repro"
+harness = false # do not use the built in cargo test harness -> resolve rust-analyzer errors
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[features]
+default = []
+
+experimental = ["esp-idf-svc/experimental"]
+
+[dependencies]
+log = "0.4"
+esp-idf-svc = "0.51"
+esp-idf-sys = "0.36"
+
+# Configuration goes here in the root/binary crate
+[package.metadata.esp-idf-sys]
+[[package.metadata.esp-idf-sys.extra_components]]
+remote_component = { name = "dptechnics/walter-modem", version = "^1.4.0" }
+bindings_module = "walter"
+
+[build-dependencies]
+embuild = "0.33"

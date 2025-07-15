@@ -1,0 +1,10 @@
+# Rust often needs a bit of an extra main task stack size compared to C (the default is 3K)
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8000
+
+# Walter-ESP-IDF component configuration (based on actual Kconfig)
+CONFIG_WALTER_MODEM_KCONFIG=y
+CONFIG_WALTER_MODEM_ENABLE_SOCKETS=y
+CONFIG_WALTER_MODEM_ENABLE_MQTT=y
+CONFIG_WALTER_MODEM_ENABLE_HTTP=y
+CONFIG_WALTER_MODEM_ENABLE_COAP=y
+CONFIG_WALTER_MODEM_ENABLE_GNSS=y

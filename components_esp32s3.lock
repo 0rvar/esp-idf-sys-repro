@@ -1,0 +1,19 @@
+dependencies:
+  dptechnics/walter-modem:
+    component_hash: fb8e521bca55542da8f99ad7ac7d107d1dfa19b84fe7ee08fb82a32a42f8cfd1
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s3
+    version: 1.4.0
+  idf:
+    source:
+      type: idf
+    version: 5.2.0
+direct_dependencies:
+- dptechnics/walter-modem
+manifest_hash: 766fd28de11c8287b54b330e0f31378e3d9eca02ae70bb58249ac50bac04a771
+target: esp32s3
+version: 2.0.0
