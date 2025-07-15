@@ -31,6 +31,7 @@ esp-idf-sys = "0.36"
 [[package.metadata.esp-idf-sys.extra_components]]
 remote_component = { name = "dptechnics/walter-modem", version = "^1.4.0" }
 bindings_module = "walter"
+bindings_header = "walter.hpp"
 
 [build-dependencies]
 embuild = "0.33"
